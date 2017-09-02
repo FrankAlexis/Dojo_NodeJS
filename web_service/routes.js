@@ -12,5 +12,6 @@ router.get("/", function(req, res) {
 
 router.post('/save', db.save);
 router.get('/users', db.getAll);
+router.get('/user/:name', db.get);
 
 module.exports = router;

@@ -23,7 +23,14 @@ function getAll(req, res) {
         res.send(doc);
     });
 }
+
+function get(req, res) {
+    User.findOne({ name: req.params.name }, function(err, doc) {
+        res.send(doc);
+    });
+}
 module.exports = {
     save: save,
-    getAll: getAll
+    getAll: getAll,
+    get: get
 }
